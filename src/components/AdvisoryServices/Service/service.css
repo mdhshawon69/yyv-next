@@ -1,0 +1,220 @@
+/*
+0 - 430px;       small-phone
+430 - 568px:     medium-phone
+568 - 600px:     phone
+600 - 1000px:    tablet portrait
+900 - 1300px:    tablet landscape
+[1300 - 1800px] is where normal style apply
+1800px + :       Big desktop
+*/
+/*
+$breakpoint arguments choice:
+- s-phone
+- M-phone
+- phone
+- tab-port
+- tab-land
+- desktop
+- M-desktop
+- big-desktop
+*/
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikThin.otf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikThinItalic.otf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikExtralight.otf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikExtralightItalic.otf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikLight.otf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikLightItalic.otf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikRegular.otf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikRegularItalic.otf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikMedium.otf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikMediumItalic.otf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikSemibold.otf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikSemiboldItalic.otf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikBold.otf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikBoldItalic.otf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikBoldItalic.otf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikBold.otf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikBlackItalic.otf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikSuper.otf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikSuperItalic.otf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+.service-grid {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://yy.ventures/_nuxt/img/africa.5895729.jpg");
+  background-position: 0 0;
+  background-size: cover;
+  height: 80vh;
+  position: relative;
+}
+@media screen and (max-width: 601px) {
+  .service-grid {
+    height: 350px;
+  }
+}
+
+.service-grid-content {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+}
+.service-grid-content .service-grid-title h2 {
+  color: white;
+  font-weight: 900;
+  font-size: clamp(24px, 2.4vw, 4vw);
+  margin: 0;
+}
+.service-grid-content .service-grid-buttons {
+  margin-top: 5%;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 601px) {
+  .service-grid-content .service-grid-buttons {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+.service-grid-content .service-grid-buttons .container {
+  display: flex;
+  align-items: center;
+  padding: 0 !important;
+}
+@media screen and (max-width: 601px) {
+  .service-grid-content .service-grid-buttons .container {
+    align-self: flex-start;
+  }
+}
+.service-grid-content .service-grid-buttons .location {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 100%;
+  padding: 10px 24px;
+  background-color: white;
+  color: #c7265b;
+}
+@media screen and (max-width: 601px) {
+  .service-grid-content .service-grid-buttons .location {
+    align-self: flex-start;
+  }
+}
+.service-grid-content .service-grid-buttons .location span {
+  height: -moz-min-content;
+  height: min-content;
+}
+.service-grid-content .service-grid-buttons button {
+  outline: none;
+  border: none;
+  padding: 10px 24px;
+  font-size: calc(8px + 0.5vw);
+  text-transform: capitalize;
+  cursor: pointer;
+  font-family: "Graphik";
+}
+@media screen and (max-width: 601px) {
+  .service-grid-content .service-grid-buttons button {
+    font-size: calc(12px + 0.5vw);
+  }
+}
+.service-grid-content .service-grid-buttons .btn-route {
+  background-color: white;
+  color: #c7265b;
+}
+.service-grid-content .service-grid-buttons .btn-ongoing {
+  background-color: #333;
+  border: 1px solid #333;
+  color: #fff;
+}/*# sourceMappingURL=service.css.map */

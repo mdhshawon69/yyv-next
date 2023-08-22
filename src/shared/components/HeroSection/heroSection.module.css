@@ -1,0 +1,246 @@
+/*
+0 - 430px;       small-phone
+430 - 568px:     medium-phone
+568 - 600px:     phone
+600 - 1000px:    tablet portrait
+900 - 1300px:    tablet landscape
+[1300 - 1800px] is where normal style apply
+1800px + :       Big desktop
+*/
+/*
+$breakpoint arguments choice:
+- s-phone
+- M-phone
+- phone
+- tab-port
+- tab-land
+- desktop
+- M-desktop
+- big-desktop
+*/
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikThin.otf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikThinItalic.otf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikExtralight.otf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikExtralightItalic.otf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikLight.otf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikLightItalic.otf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikRegular.otf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikRegularItalic.otf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikMedium.otf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikMediumItalic.otf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikSemibold.otf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikSemiboldItalic.otf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikBold.otf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikBoldItalic.otf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikBoldItalic.otf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikBold.otf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikBlackItalic.otf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikSuper.otf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikSuperItalic.otf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+.heroContainer {
+  position: relative;
+  height: 100vh;
+  padding-top: 15%;
+  padding-bottom: 15%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.heroContainer .heroTextContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 15%;
+}
+@media (max-width: 85.375em) {
+  .heroContainer .heroTextContainer {
+    padding-left: 3%;
+  }
+}
+@media (max-width: 40em) {
+  .heroContainer .heroTextContainer {
+    padding-left: 5%;
+  }
+}
+.heroContainer .imageContainer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+.heroContainer .imageContainer .img {
+  height: 100%;
+  width: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.heroContainer h1 {
+  /* margin-top: 10px; */
+  margin: 0 !important;
+  color: #3a3b3a;
+  font-size: 100px !important;
+  line-height: 1.1 !important;
+  text-transform: none !important;
+  /* margin-bottom: -45px; */
+}
+@media (max-width: 85.375em) {
+  .heroContainer h1 {
+    font-size: 80px !important;
+  }
+}
+@media (max-width: 60em) {
+  .heroContainer h1 {
+    font-size: 80px !important;
+    /* margin-bottom: -35px; */
+  }
+}
+@media (max-width: 40em) {
+  .heroContainer h1 {
+    /* font-size: 19px !important; */
+    font-size: 40px !important;
+  }
+}
+
+.fadeInContainer > .imageContainer {
+  animation: fadeIn 3s ease-in-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+.fadeInContainer > .imageContainer1 {
+  animation-delay: 0s;
+}
+
+.fadeInContainer > .imageContainer2 {
+  animation-delay: 2s;
+}
+
+.fadeInContainer > .imageContainer3 {
+  animation-delay: 4s;
+}
+
+.fadeInContainer > .imageContainer4 {
+  animation-delay: 6s;
+}
+
+.fadeInContainer > .imageContainer5 {
+  animation-delay: 8s;
+}
+
+.fadeInContainer > .imageContainer6 {
+  animation-delay: 10s;
+}
+
+.fadeInContainer > .imageContainer7 {
+  animation-delay: 12s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 0.5;
+  }
+  70% {
+    opacity: 0.85;
+  }
+  100% {
+    opacity: 0;
+  }
+}/*# sourceMappingURL=heroSection.module.css.map */

@@ -1,0 +1,184 @@
+@import '../../../style/utils/base';
+
+.navbar{
+    position: fixed;
+    z-index: 9999;
+    padding: 1rem 4rem;
+    width: 100%;
+    background-color: rgba($color: white, $alpha: 0.8);
+    transition: transform 400ms ease-in-out;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include response(phone){
+        justify-content: center;
+    }
+
+    .logoContainer{
+        height: 4.5rem;
+        width: auto;
+        cursor: pointer;
+
+        .logo{
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+        }
+    }
+
+    .menuBtn {
+        display: none;
+        background-color: transparent;
+        border: none;
+        margin: 0px;
+        min-height: 2.5rem;
+        min-width: 3rem;
+        transition: all 0.3s;
+        cursor: pointer;
+
+        position: absolute;
+        right: 3rem;
+        z-index: 99;
+
+        @include response(phone){
+            display: block;
+        }
+        
+        &:hover,
+        &:focus,
+        &:active {
+          outline: none;
+        }
+
+        .bar {
+            background-color: $color-text-dark;
+            width: 3rem;
+            height: 3px;
+            margin: 4px auto;
+            border-radius: 3px;
+            display: block;
+            position: relative;
+            transition: all 0.3s;
+            backface-visibility: hidden;
+        }
+          
+        .bar:before,
+        .bar:after {
+            content: '';
+            background-color: $color-text-dark;
+            border-radius: 3px;
+            width: 3rem;
+            height: 3px;
+            margin: 4px auto;
+            position: absolute;
+            transition: all 0.3s;
+            backface-visibility: hidden;
+        }
+          
+        .bar:before {
+            top: -12px;
+            left: 0px;
+        }
+          
+        .bar:after {
+            bottom: -12px;
+            left: 0px;
+        }
+    }
+      
+    .menuBtn.active {
+    
+        > .bar {
+            background-color: transparent;
+            transition: .2s;
+        }
+        > .bar:before {
+            transform: rotate(45deg) translate(4px, 9px);
+            transition: .3s;
+            width: 28px;
+            left: 1px;
+        }
+        > .bar:after {
+            transform: rotate(-45deg) translate(3px, -7px);
+            transition: .3s;
+            width: 28px;
+            left: 1px;
+        }
+    }
+
+    .list{
+        display: flex;
+        align-items: center;
+        gap: 4em;
+        transition: all 500ms ease-in-out;
+
+        
+        @include response(desktop){
+            gap: 2.5rem;
+        }
+        
+        @include response(phone){
+            padding-top: 10rem;
+            height: 100svh;
+            width: 100%;
+            background-color: $color-background-white;
+
+            position: fixed;
+            top: 0;
+            right: -100%;
+
+
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .item{
+            text-decoration: none;
+
+            .link{
+                position: relative;
+                overflow: hidden;
+                list-style: none;
+                padding: 1rem 0;
+    
+                text-transform: capitalize;
+                font-size: 1.8rem;
+                font-weight: 800;
+                color: $color-text-grey;
+                cursor: pointer;
+    
+                transition: color 500ms;
+    
+                &::after{
+                    content: '';
+                    display: block;
+                    height: 3px;
+                    width: 0;
+                    background-color: $color-text-grey;
+                    transition: all 500ms;
+    
+                    position: absolute;
+                    bottom: .5rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+                
+                &:hover {
+                    color: $color-primary;
+                }
+    
+                &:hover::after{
+                    width: 100%;
+                    background-color: $color-primary;
+                }
+            }
+        }
+    }
+    .list.listActive{
+        @include response(phone){
+            right: 0;
+        }
+    }
+}

@@ -1,0 +1,241 @@
+@import '../../../../style/utils/base.scss';
+
+.sb-ecosystem-container {
+  margin: 0 auto;
+  width: 96%;
+  padding-top: 5%;
+  padding-bottom: 30px;
+  font-family: 'Graphik';
+  overflow: hidden;
+  .sb-ecosystem-header {
+    height: 85vh;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    @media screen and (max-width: 800px) {
+      height: 350px;
+      margin-top: 10%;
+    }
+    .header_content {
+      position: absolute;
+      bottom: 10%;
+      left: 5%;
+      width: 95%;
+      h2 {
+        color: white;
+        font-weight: 900;
+        font-size: 60px;
+        margin: 0;
+        line-height: 1.3;
+
+        @media screen and (max-width: 800px) {
+          font-size: 40px;
+        }
+
+        @media screen and (max-width: 601px) {
+          font-size: 28px;
+        }
+      }
+      .sub-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+
+        @media screen and (max-width: 800px) {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        @media screen and (max-width: 1024px) {
+          flex-direction: column;
+        }
+
+        @media screen and (min-width: 800px) {
+          align-items: stretch;
+        }
+
+        h4 {
+          color: #f8d23a;
+          font-size: 30px;
+          font-weight: 900;
+
+          @media screen and (max-width: 800px) {
+            font-size: 18px;
+          }
+
+          @media screen and (max-width: 601px) {
+            font-size: 16px;
+          }
+
+          @media screen and (max-width: 1024px) {
+            margin-top: 15px;
+          }
+
+          span {
+            @media screen and (max-width: 1440px) {
+              display: block;
+            }
+            @media screen and (max-width: 600px) {
+              display: inline;
+            }
+          }
+        }
+
+        a {
+          font-size: 35px;
+          color: #f8d23a;
+          // -webkit-text-fill-color: transparent;
+          // -webkit-text-stroke-width: 0.3px;
+          font-weight: bold;
+          text-decoration: none;
+          transition: all 0.2s ease-in-out;
+          margin-left: -100px;
+
+          @media screen and (max-width: 800px) {
+            font-size: 20px;
+            margin-left: -100px;
+          }
+
+          @media screen and (max-width: 1280px) {
+            font-size: 25px;
+          }
+
+          &:hover {
+            -webkit-text-fill-color: #f8d23a;
+          }
+        }
+
+        .apply-button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 15px;
+          transition: all 0.3s ease-in-out;
+          margin-bottom: -35px;
+
+          @media screen and (max-width: 800px) {
+            align-self: flex-start;
+            padding-left: 100px;
+            margin-bottom: 0;
+          }
+
+          @media screen and (max-width: 1024px) {
+            align-self: flex-start;
+            padding-left: 100px;
+          }
+
+          &:hover {
+            transform: translateX(10px);
+          }
+
+          img {
+            width: 40px;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+  .sb-ecosystem-body {
+    padding: 2.5%;
+    margin-top: 2%;
+    background-color: #f1f2f2;
+
+    @media screen and (max-width: 600px) {
+      padding: 3% 5%;
+    }
+
+    p {
+      line-height: 1.3;
+      // text-align: justify;
+    }
+
+    .note {
+      margin-block: 3%;
+      text-align: center;
+      h4 {
+        font-weight: 600;
+      }
+    }
+  }
+  .sb-ecosystem-footer {
+    padding: 2.5%;
+    @media screen and (max-width: 768px) {
+      padding: 5%;
+    }
+    a {
+      text-decoration: none;
+      color: #333;
+      padding: 10px 36px;
+      border: 2px solid #999;
+      margin-top: 2.5%;
+    }
+  }
+  small {
+    display: block;
+    text-align: right;
+    font-size: 1.4rem;
+  }
+}
+.partners {
+  padding: 2% 10% 10% 10%;
+  @media screen and (max-width: 768px) {
+    padding: 15% 10% 50% 10%;
+  }
+  text-align: center;
+  .partner-header {
+    h2 {
+      font-weight: 900;
+      font-size: 3rem;
+      text-transform: capitalize;
+      @media screen and (max-width: 768px) {
+        font-size: 2rem;
+      }
+    }
+  }
+  .partner-body-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5%;
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 5% 10%;
+    }
+    margin-top: 2rem;
+
+    .partner-garbage {
+      justify-self: end;
+      height: 4rem;
+      width: 13rem;
+
+      @media screen and (max-width: 768px) {
+        justify-self: center;
+
+        width: 70%;
+      }
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+    .partner-yyv {
+      height: 4rem;
+      width: 12rem;
+
+      @media screen and (max-width: 768px) {
+        width: 70%;
+        justify-self: center;
+      }
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}

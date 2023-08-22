@@ -1,0 +1,69 @@
+@import '../../../style/utils/base';
+
+.vision-container {
+  background-image: url('../../../assets/images/footerBg.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 50px;
+  @media (max-width: 601px) {
+    padding: 30px;
+    background-size: cover;
+    background-position: 75% 0;
+  }
+}
+
+.vision {
+  display: grid;
+  margin-bottom: 50px;
+  grid-gap: 50px;
+
+  @media (min-width: 601px) {
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+  }
+
+  article {
+    h2 {
+      font-size: clamp(35px, 2.4vw, 40px);
+
+      @media (max-width: 601px) {
+        font-size: clamp(21px, 2.4vw, 40px);
+      }
+    }
+
+    p {
+      font-size: 1.6rem;
+      &:not(:first-of-type) {
+        margin-top: 15px;
+      }
+    }
+
+    .p {
+      font-size: 1.6rem;
+      &:not(:first-of-type) {
+        margin-top: 15px;
+      }
+    }
+  }
+}
+
+h4 {
+  font-weight: 800 !important;
+  line-height: 1.2;
+  padding: 5rem;
+  color: #d0d2d3;
+  font-family: 'Graphik';
+  font-weight: 900;
+  font-size: calc(24px + 3vw);
+  @media (max-width: 601px) {
+    font-size: 30px;
+    line-height: 50px;
+  }
+}
+
+.section-heading {
+  line-height: 1.2;
+  font-size: calc(24px + 3vw);
+  margin-bottom: 1rem;
+}

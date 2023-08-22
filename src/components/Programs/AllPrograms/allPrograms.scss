@@ -1,0 +1,23 @@
+@import '../../../style/utils/base.scss';
+
+.mainContainerPrograms {
+  width: 95%;
+  margin: 0 auto;
+
+  .gridContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+
+    @media screen and (max-width: 601px) {
+      grid-template-columns: 1fr !important;
+    }
+
+    .fullGrid {
+      grid-column: 1 / span 2;
+      @include response(phone) {
+        grid-column: unset;
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+@import '../../../../style/utils/base.scss';
+
+.program-countries-container {
+  width: 96%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 80px 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  @media screen and (max-width: 800px) {
+    padding: 30px 0;
+  }
+
+  h2 {
+    font-size: 50px;
+    font-weight: bold;
+    color: $color-text-dark;
+    margin-bottom: 50px;
+    text-transform: capitalize;
+
+    @media screen and (max-width: 800px) {
+      font-size: 45px;
+    }
+
+    @include response(phone) {
+      font-size: 2.8rem;
+    }
+  }
+
+  .program-countries {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 601px) {
+      width: 100%;
+      gap: 20px;
+    }
+
+    .program-country {
+      text-align: center;
+      @media screen and (max-width: 800px) {
+        width: 40%;
+      }
+
+      h5 {
+        font-size: 25px;
+        color: #8e8e8e;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+    }
+  }
+}

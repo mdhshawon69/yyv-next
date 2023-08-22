@@ -1,0 +1,123 @@
+@import '../../../style/utils/_base.scss';
+
+.values-main-container {
+  position: relative;
+
+  .values-leaf {
+    position: absolute;
+    top: 10%;
+    left: 0;
+
+    @include response(desktop) {
+      width: fit-content;
+      top: 15%;
+      height: 60%;
+      object-fit: contain;
+    }
+
+    @include response(phone) {
+      height: 40%;
+      top: 5%;
+      left: -20%;
+    }
+  }
+}
+
+.values-new-container {
+  width: 95%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 20rem 0;
+  gap: 5rem;
+
+  @include response(desktop) {
+    padding: 10rem 0;
+  }
+
+  @include response(phone) {
+    padding: 10rem 0;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .values-left {
+    padding-left: 20rem;
+
+    @include response(desktop) {
+      padding-left: 12rem;
+    }
+
+    @include response(phone) {
+      padding-left: 10rem;
+    }
+
+    h2 {
+      font-size: 6rem;
+      margin-bottom: 1rem;
+      color: $color-text-dark;
+
+      @include response(desktop) {
+        font-size: 4rem;
+      }
+    }
+
+    p {
+      font-size: 2.6rem;
+      font-weight: 400;
+
+      @include response(desktop) {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .values-right {
+    h3 {
+      font-size: 4.2rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 2rem;
+      padding: 0 5rem;
+      cursor: pointer;
+      border-bottom: 2px solid $color-primary;
+
+      @include response(desktop) {
+        font-size: 3rem;
+      }
+
+      @include response(phone) {
+        padding: 0 2rem;
+      }
+    }
+
+    .triangle {
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      background: $color-primary;
+      width: 2rem;
+      height: 2rem;
+      display: block;
+    }
+
+    .accordion-content {
+      background: #e3e3e3;
+    }
+
+    p {
+      font-size: 2rem;
+      padding: 2rem 5rem;
+
+      @include response(desktop) {
+        font-size: 1.6rem;
+      }
+
+      @include response(phone) {
+        padding: 2rem;
+      }
+    }
+
+    .values-accordion {
+      padding: 1rem 0;
+    }
+  }
+}

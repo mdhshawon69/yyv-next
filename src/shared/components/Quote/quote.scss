@@ -1,0 +1,105 @@
+@import '../../../style/utils/base';
+
+#quote {
+  text-align: center;
+  padding: 50px 0;
+  overflow-x: hidden;
+
+  .line_1,
+  .line_2 {
+    color: $color-text-dark;
+    white-space: nowrap;
+    line-height: 1;
+    font-size: clamp(40px, 13vw, 180px);
+    width: 100%;
+    display: flex;
+
+    @media (max-width: 1440px) {
+      font-size: clamp(40px, 13vw, 150px);
+      // margin-left: 80px;
+    }
+
+    @media (max-width: 601px) {
+      font-size: clamp(40px, 13vw, 150px);
+    }
+
+    &.line_1 {
+      justify-content: center;
+      @media (max-width: 601px) {
+        // margin-left: 110px;
+        // justify-content: center;
+      }
+    }
+
+    &.line_2 {
+      display: flex;
+      justify-content: center;
+      font-size: clamp(30px, 10vw, 130px);
+
+      @media (max-width: 1440px) {
+        font-size: clamp(30px, 10vw, 110px);
+      }
+
+      @media (max-width: 601px) {
+        // margin-left: -180px;
+        // justify-content: center;
+      }
+
+      .word_2 {
+        -webkit-text-fill-color: transparent;
+        // -webkit-text-stroke: 1px $color-text-dark;
+
+        @media (min-width: 601px) {
+          -webkit-text-stroke: 2px $color-text-dark;
+        }
+      }
+    }
+  }
+
+  h5 {
+    color: $color-text-dark;
+    font-size: 1.8rem;
+    margin-top: 50px;
+  }
+
+  p {
+    color: $color-text-dark;
+    font-size: clamp(11px, 2vw, 16px);
+  }
+}
+
+.reel_right {
+  animation: reel_right 1s linear calc(var(--scroll) * -1s) 1 normal both paused;
+
+  @media (max-width: 601px) {
+    animation: reel_right 1s linear calc(var(--scroll) * -1s) 1 normal both
+      paused;
+  }
+
+  @keyframes reel_right {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+}
+
+.reel_left {
+  animation: reel_left 1s linear calc(var(--scroll) * -1s) 1 normal both paused;
+
+  @media (max-width: 601px) {
+    animation: reel_left 1s linear calc(var(--scroll) * -1s) 1 normal both
+      paused;
+  }
+
+  @keyframes reel_left {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+}

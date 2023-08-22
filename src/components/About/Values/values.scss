@@ -1,0 +1,46 @@
+@import '../../../style/utils/base.scss';
+
+.valuesContainer {
+  width: 95%;
+  margin: 0 auto;
+  height: 900px;
+  background-image: url('https://yy.ventures/_nuxt/img/about-values-bg.75cff6c.svg');
+  background-position: 0 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include response(desktop) {
+    height: 650px;
+  }
+
+  @include response(phone) {
+    height: 550px;
+  }
+
+  .mainHeading {
+    h3 {
+      font-size: 6rem;
+      margin-top: 5rem;
+      margin-bottom: 3rem;
+      color: $color-text-dark;
+
+      @include response(desktop) {
+        font-size: 4rem;
+      }
+    }
+  }
+
+  h4 {
+    font-size: 8rem;
+    padding: 1rem 0 !important;
+    color: $color-text-dark;
+
+    @include response(desktop) {
+      font-size: 6rem;
+    }
+
+    @include response(phone) {
+      font-size: 4.5rem;
+    }
+  }
+}

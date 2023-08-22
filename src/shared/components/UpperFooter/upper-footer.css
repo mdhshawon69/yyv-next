@@ -1,0 +1,174 @@
+/*
+0 - 430px;       small-phone
+430 - 568px:     medium-phone
+568 - 600px:     phone
+600 - 1000px:    tablet portrait
+900 - 1300px:    tablet landscape
+[1300 - 1800px] is where normal style apply
+1800px + :       Big desktop
+*/
+/*
+$breakpoint arguments choice:
+- s-phone
+- M-phone
+- phone
+- tab-port
+- tab-land
+- desktop
+- M-desktop
+- big-desktop
+*/
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikThin.otf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikThinItalic.otf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikExtralight.otf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikExtralightItalic.otf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikLight.otf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikLightItalic.otf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikRegular.otf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikRegularItalic.otf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikMedium.otf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikMediumItalic.otf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikSemibold.otf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikSemiboldItalic.otf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikBold.otf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikBoldItalic.otf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikBoldItalic.otf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikBold.otf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikBlackItalic.otf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikSuper.otf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikSuperItalic.otf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+.upperFooterContainer {
+  padding: 4rem;
+  text-align: center;
+}
+@media (max-width: 40em) {
+  .upperFooterContainer {
+    padding: 5rem;
+  }
+}
+.upperFooterContainer h2 {
+  font-size: clamp(20px, 2.4vw, 35px);
+  color: #3a3b3b;
+  line-height: 1.2;
+}
+.upperFooterContainer a {
+  display: inline-block;
+}
+.upperFooterContainer .arrow {
+  display: block;
+  margin-top: 25px;
+  transition: transform 500ms;
+}
+.upperFooterContainer .arrow:after, .upperFooterContainer .arrow:before {
+  content: "";
+  display: inline-block;
+  transform: rotate(-45deg);
+  border: solid #c7265b;
+  border-width: 0 5px 5px 0;
+  padding: 10px;
+  transition: 0.5s all ease-in-out;
+}
+@media (min-width: 601px) {
+  .upperFooterContainer .arrow:after, .upperFooterContainer .arrow:before {
+    border-width: 0 7px 7px 0;
+    padding: 12px;
+  }
+}
+.upperFooterContainer .arrow:hover {
+  transform: translateX(10px);
+}/*# sourceMappingURL=upper-footer.css.map */

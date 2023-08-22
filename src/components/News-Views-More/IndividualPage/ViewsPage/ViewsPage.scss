@@ -1,0 +1,137 @@
+.yunus-news-container {
+  margin: 0 auto;
+  width: 96%;
+  padding: 5% 0;
+  font-family: 'Graphik';
+  @media screen and (max-width: 601px) {
+    width: 90%;
+  }
+  .yunus-news-header {
+    height: 700px;
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @media screen and (min-width: 1441px) {
+      height: 800px;
+    }
+    // @media screen and (max-width: 601px) {
+    //   grid-template-columns: 1fr;
+    //   background-image: url('~/assets/images/news/okki-mobile.jpg');
+    // }
+    .header-left {
+      padding: 10% 0 5% 5%;
+      h1 {
+        margin: 0;
+        font-size: calc(32px + 2vw);
+        color: #fff;
+      }
+      p {
+        padding: 10% 5% 5% 0;
+        font-weight: bold;
+        font-size: calc(10px + 1vw);
+        margin: 0;
+        color: #fff;
+      }
+      .author {
+        h5 {
+          margin: 0;
+          font-size: 14px;
+          font-weight: 800;
+          color: #fff;
+          @media screen and (max-width: 601px) {
+            font-size: 10px;
+          }
+        }
+        p {
+          padding: 0;
+          font-size: 14px;
+          font-weight: 400;
+          @media screen and (max-width: 601px) {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+    .header-right {
+      position: relative;
+      img {
+        width: 90%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        @media screen and (max-width: 601px) {
+          position: relative;
+          margin-left: 5%;
+        }
+      }
+    }
+  }
+  .yunus-news-body {
+    margin-top: 5%;
+    padding: 2.5% 2.5%;
+    background: #f1f2f2;
+    @media screen and (max-width: 601px) {
+      padding: 2.5% 5%;
+    }
+    .body-block {
+      margin-top: 2.5%;
+      h2 {
+        font-weight: 900;
+        margin: 0;
+      }
+      p {
+        color: #333;
+        font-size: clamp(14px, 1.1vw, 4vw);
+        line-height: 1.5;
+      }
+      img {
+        width: 100%;
+      }
+      .space-top {
+        margin-top: 2.5%;
+      }
+    }
+    .body-block-grid {
+      padding: 5% 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      @media screen and (max-width: 601px) {
+        grid-template-columns: 1fr;
+      }
+      .body-block-left {
+        img {
+          width: 100%;
+        }
+      }
+      .body-block-right {
+        padding: 0 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @media screen and (max-width: 601px) {
+          padding: 5% 0;
+        }
+        h1 {
+          margin: 0;
+          font-size: calc(32px + 2vw);
+          color: #333;
+        }
+        p {
+          padding: 10% 5% 0 0;
+          font-weight: bold;
+          font-size: calc(10px + 1vw);
+          margin: 0;
+        }
+      }
+    }
+  }
+  .yunus-news-footer {
+    padding: 2.5% 0;
+    a {
+      padding: 8px 32px;
+      border: 2px solid #999;
+      color: #333;
+      font-size: 1.9rem;
+    }
+  }
+}

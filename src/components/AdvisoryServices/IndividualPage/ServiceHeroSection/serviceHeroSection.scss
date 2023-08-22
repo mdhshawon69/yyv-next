@@ -1,0 +1,109 @@
+@import '../../../../style/utils/base';
+
+.central-africa-container {
+  margin: 0 auto;
+  width: 96%;
+  padding: 5% 0;
+  font-family: 'Graphik';
+  .central-africa-header {
+    margin-top: 5%;
+    height: 75vh;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    @media screen and (max-width: 601px) {
+      height: 350px;
+      margin-top: 10%;
+      background-position: right;
+    }
+    .header_content {
+      position: absolute;
+      bottom: 5%;
+      left: 5%;
+      h2 {
+        color: white;
+        font-weight: 900;
+        font-size: clamp(24px, 3vw, 4vw);
+        margin: 0;
+        line-height: 1.2;
+      }
+    }
+  }
+  .central-africa-body {
+    padding: 2.5%;
+    margin-top: 2%;
+    background-color: #f1f2f2;
+    .top-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      @media screen and (max-width: 601px) {
+        grid-template-columns: 1fr;
+      }
+      .top-grid-left {
+        padding-right: 10%;
+        @media screen and (max-width: 601px) {
+          padding-right: 2.5%;
+        }
+        h2 {
+          font-weight: 900;
+          font-size: calc(24px + 2vw);
+          line-height: 1.2;
+          margin-bottom: 3rem;
+        }
+        p {
+          font-weight: 600;
+          color: #333;
+          font-size: calc(14px + 1.5vmin);
+          line-height: 1.2;
+        }
+      }
+      .top-grid-right {
+        img {
+          width: 100%;
+          @include response(phone) {
+            margin-top: 3rem;
+          }
+        }
+      }
+    }
+    .bottom-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 5% 0;
+      @media screen and (max-width: 601px) {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      .bottom-grid-left,
+      .bottom-grid-right {
+        padding-right: 10%;
+        @media screen and (max-width: 601px) {
+          padding-right: 2.5%;
+        }
+        p {
+          color: #333;
+          font-size: calc(12px + 1vmin);
+          line-height: 1.4;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+  .central-africa-footer {
+    padding: 2.5%;
+    padding-left: 0;
+    @media screen and (max-width: 601px) {
+      padding: 5%;
+      padding-left: 0;
+    }
+    a {
+      text-decoration: none;
+      color: #333;
+      padding: 10px 36px;
+      border: 2px solid #999;
+      margin-top: 2.5%;
+      font-size: 2rem;
+    }
+  }
+}

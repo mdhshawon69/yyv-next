@@ -1,0 +1,166 @@
+@import '../../../../style/utils/base';
+
+.east-africa-container {
+  margin: 0 auto;
+  width: 96%;
+  padding: 5% 0;
+  font-family: 'Graphik';
+  .east-africa-header {
+    margin-top: 5%;
+    height: 85vh;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    @media screen and (max-width: 601px) {
+      height: 350px;
+      background-position: center;
+      margin-top: 10%;
+    }
+    .header_content {
+      position: absolute;
+      bottom: 5%;
+      left: 5%;
+      h2 {
+        color: white;
+        font-weight: 900;
+        font-size: clamp(24px, 2.7vw, 4vw);
+        margin: 0;
+
+        @media screen and (max-width: 600px) {
+          font-size: clamp(20px, 2.7vw, 4vw);
+        }
+      }
+    }
+  }
+
+  .east-africa-body {
+    padding: 2.5%;
+    margin-top: 2%;
+    background-color: #f1f2f2;
+    position: relative;
+    .date-p {
+      color: #999;
+      position: absolute;
+      bottom: 0;
+      left: 2.5%;
+      @media screen and (max-width: 600px) {
+        font-size: 12px;
+      }
+    }
+
+    a {
+      color: royalblue !important;
+    }
+
+    .top-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: min-content;
+      @media screen and (max-width: 601px) {
+        grid-template-columns: 1fr;
+      }
+      .top-grid-left {
+        padding-right: 10%;
+        @media screen and (max-width: 601px) {
+          padding-right: 2.5%;
+        }
+        h2 {
+          font-weight: 900;
+          font-size: clamp(24px, 2.6vw, 4vw);
+        }
+        p {
+          color: #333;
+          font-size: 1.9rem;
+          line-height: 1.5;
+          font-weight: 400;
+
+          @media screen and (max-width: 1280px) {
+            font-size: 1.6rem;
+          }
+        }
+      }
+      .top-grid-right {
+        p {
+          color: #333;
+          font-size: 1.9rem;
+          line-height: 1.5;
+
+          @media screen and (max-width: 600px) {
+            font-size: 1.6rem;
+          }
+        }
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+
+          @media screen and (max-width: 600px) {
+            height: max-content;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+  }
+
+  .participant {
+    margin-top: 20px;
+
+    .heading-container {
+      display: flex;
+      justify-content: center;
+      padding: 50px 20px;
+
+      @media screen and (max-width: 1440px) {
+        padding: 20px 10px;
+      }
+
+      h2 {
+        font-size: 5.4rem;
+        font-weight: 900;
+        color: $color-text-dark;
+        line-height: 1;
+        @media screen and (max-width: 600px) {
+          font-size: 2.8rem;
+        }
+      }
+    }
+
+    .card-container {
+      padding: 100px 0;
+
+      @media screen and (max-width: 1440px) {
+        padding: 50px 0;
+      }
+
+      &:not(:last-of-type) {
+        border-bottom: 1px solid black;
+      }
+    }
+  }
+
+  .participant {
+    margin-top: 20px;
+  }
+}
+
+.east-africa-footer {
+  padding: 2.5%;
+  @media screen and (max-width: 601px) {
+    padding: 5%;
+  }
+  a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 36px;
+    border: 2px solid #999;
+    margin-top: 2.5%;
+    font-size: 1.9rem;
+
+    @media screen and (max-width: 600px) {
+      font-size: 1.6rem;
+    }
+  }
+}

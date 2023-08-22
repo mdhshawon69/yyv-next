@@ -1,0 +1,185 @@
+@import '../../../style/utils/base';
+.mainContainerFooter {
+  .leafContainer {
+    position: relative;
+    height: 50vh;
+    overflow: hidden;
+    img {
+      width: fit-content;
+      height: 100%;
+      object-fit: contain;
+      position: absolute;
+      left: -10%;
+      top: 0;
+      z-index: 3;
+
+      @include response(phone) {
+        left: -100%;
+      }
+    }
+  }
+}
+.footer {
+  background-color: $color-background-dark;
+  padding: 4rem 5rem;
+  background-image: url('../../../assets/images/footerBg_.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 2;
+
+  @media (max-width: 601px) {
+    background-size: cover;
+    background-position: 75% 0;
+  }
+
+  display: grid;
+  grid-template-columns: [col-lg-start] 2fr [col-lg-end] repeat(
+      2,
+      [col-sm-start] 1fr [col-sm-end]
+    );
+  grid-template-rows: repeat(2, [row-start] min-content [row-end]);
+  gap: 5rem;
+
+  @include response(vp-800) {
+    grid-template-columns: repeat(2, [col-start] 1fr [col-end]);
+    grid-template-rows: repeat(3, [row-start] min-content [row-end]);
+  }
+
+  @include response(s-phone) {
+    grid-template-columns: [col-start] 1fr [col-end];
+    grid-template-rows: repeat(4, [row-start] min-content [row-end]);
+  }
+
+  .aboutContainer {
+    grid-column: col-lg-start / col-lg-end;
+    grid-row: row-start 1 / row-end 1;
+
+    @include response(vp-800) {
+      grid-column: col-start 1 / col-end 2;
+      grid-row: row-start 1 / row-end 1;
+    }
+
+    @include response(s-phone) {
+      grid-column: col-start / col-end;
+      grid-row: row-start 1 / row-end 1;
+    }
+
+    .logoContainer {
+      height: 6rem;
+      width: auto;
+      width: max-content;
+      margin-bottom: 2.5rem;
+
+      .logo {
+        height: 100%;
+        width: auto;
+        object-fit: contain;
+        object-position: left;
+      }
+    }
+    .text {
+      font-size: clamp(18px, 2vw, 25px);
+      font-weight: 600;
+      line-height: 1.1;
+      color: $color-text-light;
+
+      @media screen and (min-width: 2250px) {
+        padding-right: 5rem;
+      }
+    }
+  }
+  .getInTouchContainer {
+    grid-column: col-sm-start 1 / col-sm-end 1;
+    grid-row: row-start 1 / row-end 1;
+
+    @include response(vp-800) {
+      grid-column: col-start 1 / col-end 1;
+      grid-row: row-start 2 / row-end 2;
+    }
+
+    @include response(s-phone) {
+      grid-column: col-start / col-end;
+      grid-row: row-start 2 / row-end 2;
+    }
+
+    .heading {
+      font-weight: 600;
+      font-size: clamp(16px, 2.1vw, 18px);
+      color: $color-text-light;
+      margin-bottom: 2.5rem;
+    }
+
+    .list,
+    .item,
+    .email,
+    .phone,
+    .address,
+    .link {
+      color: $color-text-midGrey;
+      font-size: clamp(14px, 2vw, 16px);
+      list-style: none;
+    }
+
+    .list {
+      margin-bottom: 2.5rem;
+    }
+
+    .phone {
+      margin-bottom: 2.5rem;
+    }
+
+    .address {
+      font-size: clamp(13px, 2.5vw, 14px);
+    }
+  }
+  .mediaContainer {
+    grid-column: col-sm-start 2 / col-sm-end 2;
+    grid-row: row-start 1 / row-end 1;
+
+    @include response(vp-800) {
+      grid-column: col-start 2 / col-end 2;
+      grid-row: row-start 2 / row-end 2;
+    }
+
+    @include response(s-phone) {
+      grid-column: col-start / col-end;
+      grid-row: row-start 3 / row-end 3;
+    }
+
+    .heading {
+      font-weight: 600;
+      font-size: clamp(16px, 2.1vw, 18px);
+      color: $color-text-light;
+      margin-bottom: 2.5rem;
+    }
+
+    .list,
+    .item,
+    .link {
+      color: $color-text-midGrey;
+      font-size: clamp(14px, 2vw, 16px);
+      list-style: none;
+    }
+  }
+  .copyrightContainer {
+    grid-column: col-lg-start / col-lg-end;
+    grid-row: row-start 2 / row-end 2;
+
+    @include response(vp-800) {
+      grid-column: col-start 1 / col-end 2;
+      grid-row: row-start 3 / row-end 3;
+    }
+
+    @include response(s-phone) {
+      grid-column: col-start / col-end;
+      grid-row: row-start 4 / row-end 4;
+    }
+
+    .copyright {
+      font-size: clamp(11px, 2vw, 14px);
+      color: $color-text-midGrey;
+    }
+  }
+}

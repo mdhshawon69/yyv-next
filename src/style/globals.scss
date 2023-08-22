@@ -1,0 +1,46 @@
+@import './utils/base';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Graphik';
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+div,
+ul,
+li {
+  font-family: 'Graphik';
+}
+
+a {
+  text-decoration: none;
+}
+
+.splide__arrow--prev {
+  left: -3rem !important;
+}
+
+.splide__arrow--next {
+  right: -3rem !important;
+}

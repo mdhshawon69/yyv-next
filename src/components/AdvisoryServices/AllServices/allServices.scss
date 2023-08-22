@@ -1,0 +1,27 @@
+@import '../../../style/utils/base.scss';
+
+.services-grid {
+  width: 95%;
+  margin: 0 auto;
+  padding: 5% 0 1% 0;
+  font-family: 'Graphik';
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  @media screen and (max-width: 601px) {
+    padding: 5% 0 5% 0;
+    grid-template-columns: 1fr;
+  }
+
+  .span_2 {
+    grid-column: 1 / span 2;
+
+    @include response(phone) {
+      grid-column: unset;
+    }
+  }
+
+  .span_full {
+    grid-column: 1 / span 3;
+  }
+}

@@ -1,0 +1,67 @@
+@import '../../../style/utils/base.scss';
+
+.home-brand-section {
+  height: auto;
+  padding: 10rem 2rem;
+  background-color: #f1f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .home-brand-collection {
+    height: auto;
+    width: 95%;
+    .brand-collection-header {
+      h2 {
+        font-weight: 800;
+        font-size: 5.8rem;
+        color: #3a3b3a;
+
+        @include response(desktop) {
+          font-size: 4.8rem;
+        }
+
+        @include response(phone) {
+          font-size: 3.2rem;
+        }
+      }
+    }
+    .brand-collection-body {
+      text-align: center;
+      margin-top: 8rem;
+      display: grid;
+      grid-gap: 10rem;
+      grid-template-columns: repeat(4, 1fr);
+
+      @include response(desktop) {
+        grid-gap: 5rem;
+      }
+
+      @include response(phone) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 5rem;
+      }
+
+      .brand-collection-body-image {
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a {
+          height: 100%;
+        }
+
+        img {
+          height: 100%;
+          width: 25rem;
+          object-fit: contain;
+
+          @media screen and (max-width: 1280px) {
+            height: 100%;
+            width: 75%;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,329 @@
+/*
+0 - 430px;       small-phone
+430 - 568px:     medium-phone
+568 - 600px:     phone
+600 - 1000px:    tablet portrait
+900 - 1300px:    tablet landscape
+[1300 - 1800px] is where normal style apply
+1800px + :       Big desktop
+*/
+/*
+$breakpoint arguments choice:
+- s-phone
+- M-phone
+- phone
+- tab-port
+- tab-land
+- desktop
+- M-desktop
+- big-desktop
+*/
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikThin.otf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikThinItalic.otf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikExtralight.otf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikExtralightItalic.otf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikLight.otf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikLightItalic.otf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikRegular.otf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikRegularItalic.otf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikMedium.otf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikMediumItalic.otf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikSemibold.otf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikSemiboldItalic.otf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikBold.otf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikBoldItalic.otf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikBoldItalic.otf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikBold.otf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikBlackItalic.otf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikSuper.otf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikSuperItalic.otf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+.stories-container {
+  padding: 10% 5%;
+  height: auto;
+  background: #333;
+  width: 95%;
+  margin: 0 auto;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+@media screen and (min-width: 601px) {
+  .stories-container {
+    padding: 5% 5%;
+  }
+}
+.stories-container .stories-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4%;
+}
+@media screen and (min-width: 601px) {
+  .stories-container .stories-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.stories-container .stories-grid .stories-grid-left {
+  position: relative;
+  height: 400px;
+}
+@media screen and (min-width: 1441px) {
+  .stories-container .stories-grid .stories-grid-left {
+    height: 500px;
+  }
+}
+.stories-container .stories-grid .stories-grid-left .img-header {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.stories-container .stories-grid .stories-grid-left .img-header::before {
+  content: "";
+  display: block;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent 40%);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.stories-container .stories-grid .stories-grid-left .img-header img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.stories-container .stories-grid .stories-grid-left h2 {
+  font-size: 100px;
+  font-weight: 900;
+  text-transform: capitalize;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px #f1f2f2;
+}
+@media screen and (min-width: 601px) {
+  .stories-container .stories-grid .stories-grid-left h2 {
+    font-size: 170px;
+    bottom: -120px;
+    -webkit-text-stroke: 2px #f1f2f2;
+  }
+}
+@media screen and (max-width: 600px) {
+  .stories-container .stories-grid .stories-grid-left h2 {
+    bottom: -55px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.stories-container .stories-grid .stories-grid-right {
+  padding: 2.5%;
+  overflow-y: scroll;
+  height: 400px;
+}
+@media screen and (min-width: 1441px) {
+  .stories-container .stories-grid .stories-grid-right {
+    height: 500px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .stories-container .stories-grid .stories-grid-right {
+    margin-top: 2rem;
+  }
+}
+.stories-container .stories-grid .stories-grid-right .stories-grid-card {
+  padding: 2.5% 1%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 4%;
+}
+.stories-container .stories-grid .stories-grid-right .stories-grid-card h5 {
+  color: #f1f2f2;
+  font-size: calc(10px + 1vw);
+  font-weight: 700;
+}
+.stories-container .stories-grid .stories-grid-right .stories-grid-card .card-footer {
+  text-align: right;
+}
+.stories-container .stories-grid .stories-grid-right .stories-grid-card .card-footer a {
+  padding: 1.5% 2%;
+  border: 1px solid #f1f2f2;
+  color: #c7265b;
+  font-size: 1.8rem;
+}
+@media (max-width: 40em) {
+  .stories-container .stories-grid .stories-grid-right .stories-grid-card .card-footer a {
+    font-size: 1.4rem;
+    padding: 0.1% 2%;
+    margin: 1rem 1rem 0.5rem;
+    display: inline-block;
+  }
+}
+.stories-container .stories-grid .stories-grid-right .stories-grid-card .card-footer a:hover {
+  text-decoration: underline;
+}
+.stories-container .stories-footer {
+  padding: 2.5%;
+  margin-top: 2.5%;
+  text-align: center;
+}
+.stories-container .stories-footer button {
+  outline: 0;
+  padding: 0.5% 1%;
+  width: 170px;
+  border: 1px solid #c7265b;
+  background: inherit;
+  text-transform: capitalize;
+  color: #f1f2f2;
+  font-size: 16px;
+  cursor: pointer;
+}
+@media screen and (max-width: 600px) {
+  .stories-container .stories-footer button {
+    margin-top: 10%;
+  }
+}
+.stories-container .stories-footer button .arrow-down img {
+  height: 12px;
+  margin-left: 2.5%;
+}
+.stories-container .stories-footer p {
+  color: #f1f2f2;
+}
+.stories-container .stories-slider {
+  animation: visibleAnimate 0.3s linear;
+}
+.stories-container .stories-slider .new-slide-card {
+  padding: 0 2.5%;
+}
+.stories-container .stories-slider .new-slide-card img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 300px;
+}
+.stories-container .stories-slider .new-slide-card h3 {
+  color: #f1f2f2;
+  font-size: calc(10px + 1vw);
+  font-weight: 700;
+}
+.stories-container .stories-slider .new-slide-card p {
+  color: #f1f2f2;
+}
+.stories-container ::-webkit-scrollbar {
+  width: 5px;
+}
+.stories-container ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.stories-container ::-webkit-scrollbar-thumb {
+  background: #c7265b;
+}
+.stories-container ::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@keyframes visibleAnimate {
+  0% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}/*# sourceMappingURL=stories.css.map */

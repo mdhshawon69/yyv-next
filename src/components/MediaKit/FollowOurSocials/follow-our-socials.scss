@@ -1,0 +1,59 @@
+#follow-socials {
+  padding: 5rem 0;
+  width: 95%;
+  margin: 0 auto;
+
+  .text-section {
+    transition: margin 0.5s;
+    transition-timing-function: ease-in;
+    margin: 0px;
+
+    .text-main {
+      width: 85vw;
+
+      @media (max-width: 768px) {
+        width: 80vw;
+      }
+    }
+  }
+
+  .social-container {
+    .company-heading {
+      font-size: 22px;
+      font-weight: 600;
+      font-family: 'Graphik';
+      color: #3a3b3a;
+      margin-top: 3rem;
+    }
+
+    .text-info {
+      font-size: 18px;
+      font-weight: 400;
+      font-family: 'Graphik';
+      color: #3a3b3a;
+      margin-top: 10px;
+      display: block;
+
+      a {
+        margin-left: 5px;
+        font-weight: 300;
+        color: royalblue;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .section-heading {
+    color: #3a3b3a;
+    font-family: 'Graphik';
+    font-weight: 600;
+    font-size: 40px;
+
+    @media (max-width: 768px) {
+      font-size: 30px;
+      line-height: 35px;
+    }
+  }
+}

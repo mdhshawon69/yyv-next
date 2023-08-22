@@ -1,0 +1,97 @@
+@import '../../../style/utils/base.scss';
+
+.program-grid-content {
+  height: 80vh;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  @include response(phone) {
+    height: 30rem;
+  }
+
+  .contentContainer {
+    padding: 6rem;
+
+    @include response(phone) {
+      padding: 2rem;
+    }
+  }
+
+  .program-grid-title {
+    h2 {
+      color: white;
+      font-weight: 800 !important;
+      font-size: clamp(24px, 2.4vw, 4vw);
+      margin: 0;
+    }
+  }
+  .program-grid-buttons {
+    margin-top: 4%;
+    display: flex;
+    align-items: center;
+    // height: min-content;
+
+    @media screen and (max-width: 601px) {
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      padding: 0 !important;
+      gap: 0 !important;
+
+      @media screen and (max-width: 601px) {
+        align-self: flex-start;
+      }
+    }
+
+    .location {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      height: 100%;
+
+      padding: 10px 24px;
+      background-color: white;
+      color: #c7265b;
+
+      @media screen and (max-width: 601px) {
+        align-self: flex-start;
+      }
+      span {
+        height: min-content;
+      }
+    }
+    button {
+      outline: none;
+      border: none;
+      padding: 10px 24px;
+      font-size: calc(8px + 0.5vw);
+      text-transform: capitalize;
+      cursor: pointer;
+      font-family: 'Graphik';
+      @media screen and (max-width: 601px) {
+        font-size: calc(12px + 0.5vw);
+      }
+    }
+    .btn-route {
+      background-color: white;
+      color: #c7265b;
+    }
+    .btn-ongoing {
+      background-color: #333;
+      border: 1px solid #333;
+      color: #fff;
+    }
+  }
+}

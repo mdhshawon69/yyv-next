@@ -1,0 +1,108 @@
+#asset-download {
+  padding: 4rem 0;
+  width: 95%;
+  margin: 0 auto;
+
+  .text-section {
+    transition: margin 0.5s;
+    transition-timing-function: ease-in;
+    margin: 0px;
+
+    .text-main {
+      width: 85vw;
+
+      @media (max-width: 768px) {
+        width: 80vw;
+      }
+
+      a {
+        padding: 0.5rem 3rem;
+        font-size: 2rem;
+
+        @media screen and (max-width: 601px) {
+          font-size: 1.6rem;
+        }
+      }
+
+      .asset-container {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .btn-yyv {
+        background: #cb215b;
+        color: #fff;
+        font-family: 'Graphik';
+        font-weight: 500;
+      }
+
+      .btn-yyv-gl {
+        background-color: transparent;
+        border: 1px solid #3a3b3a;
+        color: #3a3b3a;
+        font-family: 'Graphik';
+        font-weight: 500;
+        padding: 0.4rem 3rem;
+      }
+
+      .btn-yyg {
+        background: #0b9bbf;
+        color: #fff;
+        font-family: 'Graphik';
+        font-weight: 500;
+      }
+
+      .btn-yyd {
+        background: #ffc20e;
+        color: #fff;
+        font-family: 'Graphik';
+        font-weight: 500;
+      }
+
+      .btn-yys {
+        background: #8ccc00;
+        color: #fff;
+        font-family: 'Graphik';
+        font-weight: 500;
+      }
+
+      .btn-ihd {
+        background: #802a26;
+        color: #fff;
+        font-family: 'Graphik';
+        font-weight: 500;
+      }
+
+      .btn-team {
+        background: #efd30a;
+        color: #fff;
+        font-family: 'Graphik';
+        font-weight: 500;
+      }
+    }
+  }
+
+  .section-heading {
+    color: #3a3b3a;
+    font-family: 'Graphik';
+    font-weight: 600;
+    font-size: 40px;
+
+    @media (max-width: 768px) {
+      font-size: 30px;
+      line-height: 35px;
+    }
+  }
+
+  a {
+    font-weight: 600 !important;
+
+    &[href*='sbys'] {
+      background: #848484 !important;
+    }
+  }
+}

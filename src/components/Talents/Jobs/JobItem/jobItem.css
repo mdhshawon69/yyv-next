@@ -1,0 +1,271 @@
+/*
+0 - 430px;       small-phone
+430 - 568px:     medium-phone
+568 - 600px:     phone
+600 - 1000px:    tablet portrait
+900 - 1300px:    tablet landscape
+[1300 - 1800px] is where normal style apply
+1800px + :       Big desktop
+*/
+/*
+$breakpoint arguments choice:
+- s-phone
+- M-phone
+- phone
+- tab-port
+- tab-land
+- desktop
+- M-desktop
+- big-desktop
+*/
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikThin.otf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikThinItalic.otf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikExtralight.otf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikExtralightItalic.otf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikLight.otf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikLightItalic.otf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikRegular.otf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikRegularItalic.otf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikMedium.otf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikMediumItalic.otf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikSemibold.otf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikSemiboldItalic.otf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikBold.otf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikBoldItalic.otf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikBoldItalic.otf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikBold.otf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikBlackItalic.otf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikSuper.otf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("./GraphikSuperItalic.otf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+#job-section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#job-section .open-position {
+  margin-top: 60px;
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: stretch;
+}
+@media screen and (max-width: 1024px) {
+  #job-section .open-position {
+    flex-direction: column;
+    gap: 0;
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 10rem;
+  }
+}
+#job-section .title-bg {
+  position: absolute;
+  z-index: -1;
+  font-size: 100px;
+  margin-top: -72px;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px #d0d2d3;
+  margin-left: -50px;
+  font-weight: 900;
+  font-family: "Graphik";
+}
+#job-section .description {
+  flex: 1;
+}
+#job-section .title-container {
+  flex-basis: 35%;
+}
+#job-section .job-title h2 {
+  font-family: "Graphik";
+  font-weight: 600;
+  font-size: 38px;
+}
+#job-section .job-description .accordion-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: normal;
+  font-size: 2.4rem;
+  color: #3a3b3a;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  transition: all 0.1s ease-in-out;
+}
+@media (max-width: 40em) {
+  #job-section .job-description .accordion-heading {
+    font-size: 2rem;
+  }
+}
+#job-section .job-description .accordion-heading:hover {
+  color: #ccc;
+}
+#job-section .job-description .accordion-content {
+  margin-bottom: 2rem;
+}
+#job-section .job-description .accordion-content p {
+  font-size: 1.9rem;
+}
+@media (max-width: 40em) {
+  #job-section .job-description .accordion-content p {
+    font-size: 1.6rem;
+  }
+}
+#job-section .job-description .accordion-content ul {
+  list-style-type: circle !important;
+  padding-left: 2rem;
+  color: #666;
+}
+#job-section .job-description .accordion-content ul li {
+  font-family: "Graphik";
+  font-weight: 300;
+  font-size: 1.9rem;
+  list-style-type: disc !important;
+  margin-bottom: 1rem;
+}
+@media (max-width: 40em) {
+  #job-section .job-description .accordion-content ul li {
+    font-size: 1.6rem;
+  }
+}
+#job-section .job-description p {
+  font-family: "Graphik";
+  font-weight: 300;
+  font-size: 1.9rem;
+}
+@media (max-width: 40em) {
+  #job-section .job-description p {
+    font-size: 1.6rem;
+  }
+}
+#job-section .job-description p .internship-btn {
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 5px;
+  background: #c7265b;
+}
+#job-section .job-description .contact-email {
+  padding-top: 1.5rem;
+}
+#job-section .job-description .contact-email p {
+  color: #848484;
+}
+#job-section .job-description .contact-email ul {
+  padding: 2rem 1rem;
+  color: #666;
+  list-style-type: disc !important;
+}
+#job-section .job-description .contact-email ul li {
+  font-size: 1.9rem;
+  font-weight: 400;
+}
+@media (max-width: 40em) {
+  #job-section .job-description .contact-email ul li {
+    font-size: 1.6rem;
+  }
+}
+#job-section .job-description .apply-btn {
+  background: #c7265b;
+  color: #fff;
+  font-weight: bold;
+  margin-top: 15px;
+}
+#job-section .job-description h5 {
+  font-weight: 700;
+  font-style: italic;
+  color: #333;
+}/*# sourceMappingURL=jobItem.css.map */

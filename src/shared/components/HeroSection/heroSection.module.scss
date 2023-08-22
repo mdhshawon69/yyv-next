@@ -1,0 +1,102 @@
+@import '../../../style/utils/base';
+
+.heroContainer {
+  position: relative;
+  height: calc(100vh + 10rem);
+  padding-top: 15%;
+  padding-bottom: 15%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  @include response(phone) {
+    height: 50vh;
+    background-image: url('../../../assets/images/hero-section/07.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 30%;
+  }
+
+  .heroTextContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 15%;
+
+    @include response(desktop) {
+      padding-left: 3%;
+    }
+
+    @include response(phone) {
+      padding-left: 5%;
+    }
+  }
+
+  .imageContainer {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+
+    @include response(phone) {
+      display: none;
+    }
+
+    .img {
+      height: 100%;
+      width: auto;
+      object-fit: contain;
+    }
+  }
+
+  h1 {
+    /* margin-top: 10px; */
+    margin: 0 !important;
+    color: #3a3b3a;
+    font-size: 100px !important;
+    line-height: 1.1 !important;
+    text-transform: none !important;
+    /* margin-bottom: -45px; */
+
+    @include response(desktop) {
+      font-size: 80px !important;
+    }
+
+    @include response(tab-port) {
+      font-size: 80px !important;
+      /* margin-bottom: -35px; */
+    }
+
+    @include response(phone) {
+      /* font-size: 19px !important; */
+      font-size: 40px !important;
+    }
+  }
+}
+
+.fadeInContainer > .imageContainer {
+  animation: fadeIn 3s ease-in-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+@for $i from 1 through 7 {
+  .fadeInContainer > .imageContainer#{$i} {
+    animation-delay: ($i - 1) * 2s;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 0.5;
+  }
+  70% {
+    opacity: 0.85;
+  }
+  100% {
+    opacity: 0;
+  }
+}
